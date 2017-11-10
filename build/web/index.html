@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <h1>Shared Board</h1>
+        <div id="output"></div>
+        <table>
+            <tr>
+                <td>
+                    <canvas id="myCanvas" width="400" height="400"
+                            style="border:1px solid #000000;"></canvas>
+                </td>
+                <td>
+                    <form name="inputForm" id="colorOpt">
+                        <table>
+                            <tr>
+                                <th>Color</th>
+                                <td><input type="radio" name="color" value="#FF0000" checked>Rojo</td>
+                                <td><input type="radio" name="color" value="#0000FF" >Azul</td>
+                                <td><input type="radio" name="color" value="#FF9900" >Naranja</td>
+                                <td><input type="radio" name="color" value="#33CC33" >Verde</td>
+                            </tr>                            
+                        </table>
+                    </form>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" id="clear" type="button">Clear</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" id="save" type="button">Save</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript" src="websocket.js"></script>
+        <script type="text/javascript" src="tablero.js"></script>
+    </body>
+</html>
